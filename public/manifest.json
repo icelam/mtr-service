@@ -70,6 +70,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#93000c",
+  "theme_color": "#212121",
   "background_color": "#ffffff"
 }
