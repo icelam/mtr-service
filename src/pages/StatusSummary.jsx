@@ -50,7 +50,7 @@ const Home = ({
 
     return () => {
       clearInterval(interval);
-      actions.clearLineStatusData();
+      actions.resetLineState();
     };
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -94,7 +94,7 @@ const Home = ({
                 : serviceAbnormal
               : fetchStatus === undefined
                 ? <ServiceStatus>載入中⋯⋯</ServiceStatus>
-                : <ServiceStatus>無法獲取服務收狀態，請刷新頁面或稍後再試。</ServiceStatus>
+                : <ServiceStatus>無法獲取服務狀態，請刷新頁面或稍後再試。</ServiceStatus>
           }
         </Fragment>
       </Page>

@@ -22,6 +22,15 @@ const clearLineStatusData = () => ({
   type: lineStatusType.CLEAR_LINE_STATUS_DATA
 });
 
+const clearFetchStatus = () => ({
+  type: lineStatusType.CLEAR_FETCH_STATUS
+});
+
+const resetLineState = () => (dispatch) => {
+  dispatch(clearLineStatusData());
+  dispatch(clearFetchStatus());
+};
+
 const fetchLineStatus = () => (dispatch) => {
   lineStatusService.getLineStatus().then((response) => {
     const data = xmlUtils.xml2js(response.data);
@@ -34,7 +43,13 @@ const fetchLineStatus = () => (dispatch) => {
       dispatch(clearLineStatusData());
       dispatch(fetchLineStatusError());
     }
+  }).catch((err) => {
+    dispatch(fetchLineStatusError());
+
+    if (window.console) {
+      console.log(err);
+    }
   });
 };
 
-export default { fetchLineStatus, clearLineStatusData };
+export default { fetchLineStatus, resetLineState };

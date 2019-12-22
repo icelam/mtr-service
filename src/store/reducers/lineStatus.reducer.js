@@ -22,8 +22,12 @@ export default (state = initialLineStatusState, action) => {
     case lineStatusType.CLEAR_LINE_STATUS_DATA:
       return {
         ...state,
-        fetchStatus: undefined,
         data: []
+      };
+    case lineStatusType.CLEAR_FETCH_STATUS:
+      return {
+        ...state,
+        fetchStatus: undefined
       };
     default:
       return state;
