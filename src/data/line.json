@@ -63,5 +63,15 @@
     "nameEN": "Light Rail",
     "nameTC": "輕鐵",
     "color": "D7AE00"
+  },
+  "TML": {
+    "nameEN": "Tuen Ma Line Phase 1",
+    "nameTC": "屯馬綫一期",
+    "color": "9a3b26"
+  },
+  "SCL": {
+    "nameEN": "Sha Tin to Central Link",
+    "nameTC": "沙中線",
+    "color": "9a3b26"
   }
 }

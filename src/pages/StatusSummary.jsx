@@ -65,7 +65,11 @@ const Home = ({
               <LineStatus
                 url={urlTC}
                 statusColor={status}
-                lineName={lineData[lineCode].nameTC}
+                lineName={
+                  lineData[lineCode]
+                    ? lineData[lineCode].nameTC
+                    : `未知線路 - ${lineCode}`
+                }
                 key={lineCode}
               />
             );
