@@ -1,26 +1,26 @@
 {
   "green": {
-    "nameEN": "Good Service",
-    "nameTC": "列車服務良好",
+    "nameEN": "Normal Service",
+    "nameTC": "服務正常"
   },
   "yellow": {
-    "nameEN": "Service disruption",
-    "nameTC": "服務受阻",
+    "nameEN": "Service Delay – Additional waiting and travelling time*; or Service gradually resuming*",
+    "nameTC": "服務延誤 –  額外候車及行車時間*；或服務逐步回復正常*"
   },
   "red": {
-    "nameEN": "Service delay",
-    "nameTC": "服務延誤",
+    "nameEN": "Service Disruption – consider using other transport*",
+    "nameTC": "服務受阻 – 考慮使用其他交通工具*"
   },
   "typhoon": {
-    "nameEN": "Tropical cyclone warning",
-    "nameTC": "熱帶氣旋警告",
+    "nameEN": "Tropical Cyclone Warning Signals issued",
+    "nameTC": "熱帶氣旋警告信號生效"
   },
   "grey": {
-    "nameEN": "Service ended for the day",
-    "nameTC": "服務結束",
+    "nameEN": "Non-service hours",
+    "nameTC": "非服務時間"
   },
   "pink": {
-    "nameEN": "Service disruption",
-    "nameTC": "服務受阻",
+    "nameEN": "Service Delay – Additional waiting and travelling time*; or Service gradually resuming*",
+    "nameTC": "服務延誤 –  額外候車及行車時間*；或服務逐步回復正常*"
   }
 }
