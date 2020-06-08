@@ -1,6 +1,6 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { Fragment, useEffect, useContext } from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import styled, { ThemeContext } from 'styled-components';
 import { Link } from 'react-router-dom';
 import lineData from '@data/line.json';
 import {
@@ -38,6 +38,8 @@ const Home = ({
   serviceEnded,
   actions
 }) => {
+  const themeContext = useContext(ThemeContext);
+
   useEffect(() => {
     actions.fetchLineStatus();
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
@@ -90,7 +92,7 @@ const Home = ({
               ? serviceNormal
                 ? serviceEnded
                   ? <ServiceStatus>港鐵全線（包括輕鐵）服務時間已過。</ServiceStatus>
-                  : <ServiceStatus><Icon type="tick" mainColor="#ffffff" /> 港鐵全線（包括輕鐵）列車服務正常。</ServiceStatus>
+                  : <ServiceStatus><Icon type="tick" mainColor={themeContext.textColor} /> 港鐵全線（包括輕鐵）列車服務正常。</ServiceStatus>
                 : serviceAbnormal
               : fetchStatus === undefined
                 ? <ServiceStatus>載入中⋯⋯</ServiceStatus>
